@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CodeChallenge</string>
+    <string name="details">Details</string>
+    <string name="type">Type: </string>
+    <string name="color">Color: </string>
+    <string name="available">Available: </string>
+    <string name="description">Description: </string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="rating">Rating</string>
+    <string name="products">Products</string>
+    <string name="product_details">Product Details</string>
+    <string name="web_view">WebView</string>
+    <string name="un_favorite">Vergessen</string>
+    <string name="favorite">Vormerken</string>
+</resources>

@@ -2,6 +2,7 @@ package com.check24.data.model
 
 import androidx.room.ColumnInfo
 import androidx.room.PrimaryKey
+import com.check24.utils.roundDownHalfStep
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
@@ -17,9 +18,15 @@ data class Product(
     @field:SerializedName("available") @Expose @ColumnInfo(name = "available") var available: Boolean? = false,
     @field:SerializedName("releaseDate") @Expose @ColumnInfo(name = "releaseDate") var releaseDate: Int? = 0,
     @field:SerializedName("rating") @Expose @ColumnInfo(name = "rating") var rating: Double? = 0.0,
+    @ColumnInfo(name = "isFavorite") var isFavorite: Boolean? = false
 ) {
     @field:SerializedName("price")
     @Expose
-    @ColumnInfo(name = "price")
     var price: Price? = null
+
+
+    val roundedRating: Double
+        get() {
+            return rating?.roundDownHalfStep() ?: 0.0
+        }
 }
