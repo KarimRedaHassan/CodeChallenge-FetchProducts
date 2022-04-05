@@ -1,0 +1,17 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+    }
+    dependencies {
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.4.1"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+        classpath('com.google.dagger:hilt-android-gradle-plugin:2.40.1')
+        classpath 'com.android.tools.build:gradle:7.3.0-alpha07'
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
